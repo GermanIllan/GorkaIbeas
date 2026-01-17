@@ -1,0 +1,157 @@
+/* IMPORTAR FUENTE OTF */
+@font-face {
+    font-family: 'MiFuenteCustom';
+    src: url('Fuentes/RushDriver-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* VARIABLES PARA PERSONALIZAR COLORES RÁPIDAMENTE */
+:root {
+    --color-inicio: #000000; /* Negro */
+    --color-fin: #d32f2f;    /* Rojo */
+    --fuente: 'MiFuenteCustom', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* DEGRADADO PERSONALIZABLE */
+    background: linear-gradient(135deg, var(--color-inicio), var(--color-fin));
+    background-attachment: fixed; /* Mantiene el fondo fijo al hacer scroll */
+    color: white;
+}
+
+/* NAVEGACIÓN */
+nav {
+    background: rgb(0, 0, 0);
+    padding: 2.5rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: 1;
+    margin: 0 95px;
+    font-weight: bold;
+    transition: 0.9s;
+     font-size: 1.2rem; /* El "número" que te permite escalar a tu antojo */
+    font-weight: 600;  /* Si quieres que se vean un poco más gruesos */
+    font-style: normal;
+      position: relative;
+    right: -400px; /* Empuja 30px desde la izquierda hacia la derecha */
+}
+
+nav a:hover {
+    color: #ff0008;
+}
+.nav-brand {
+    position: absolute;
+    left: 20px;       /* Distancia desde la izquierda */
+    top: 4.0%;         /* Centrado vertical */
+    transform: translateY(-50%);
+    display: flex;    /* Alinea logo y texto en fila */
+    align-items: center;
+
+}
+.nav-brand img {
+    height: 90px;     /* Ajusta el tamaño de tu logo aquí */
+    width: auto;
+    margin-right: 50px; /* Espacio entre logo y texto */
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.content-box {
+   background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 0; /* Quitamos el padding para que la imagen llegue a los bordes si quieres */
+
+    /* POSICIONAMIENTO (Arriba y al centro) */
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%) scale(1); /* Aquí puedes cambiar el scale a tu antojo */
+
+    /* INSERTAR IMAGEN DE TU CARPETA */
+    background-image: url('Imagenes/NombreLogo.png'); /* Pon aquí el nombre exacto de tu archivo */
+    background-size: cover;      /* Hace que la imagen cubra todo el cuadro */
+    background-position: center; /* Centra la imagen dentro del cuadro */
+    background-repeat: no-repeat;
+
+    /* TAMAÑO DEL CUADRO (Necesario ahora que no hay texto) */
+    width: 1200px;  /* Ajusta el ancho a tu antojo */
+    height: 200px; /* Ajusta el alto a tu antojo */
+    
+    z-index: 9999;
+}
+.content-box2 {
+   background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 0; /* Quitamos el padding para que la imagen llegue a los bordes si quieres */
+
+    /* POSICIONAMIENTO (Arriba y al centro) */
+    position: fixed;
+    top: 900px;
+    left: 50%;
+    transform: translateX(-50%) scale(1); /* Aquí puedes cambiar el scale a tu antojo */
+
+    /* INSERTAR IMAGEN DE TU CARPETA */
+    background-image: url('Imagenes/SubTitulo.png'); /* Pon aquí el nombre exacto de tu archivo */
+    background-size: cover;      /* Hace que la imagen cubra todo el cuadro */
+    background-position: center; /* Centra la imagen dentro del cuadro */
+    background-repeat: no-repeat;
+
+    /* TAMAÑO DEL CUADRO (Necesario ahora que no hay texto) */
+    width: 1500px;  /* Ajusta el ancho a tu antojo */
+    height: 180px; /* Ajusta el alto a tu antojo */
+    
+    z-index: 9999;
+}
+.content-box3 {
+ 
+    border-radius: 15px;
+    background-image: url('Imagenes/CocheBack.png'); /* Pon aquí el nombre exacto de tu archivo */
+    background-size: cover;      /* Hace que la imagen cubra todo el cuadro */
+    background-position: center; /* Centra la imagen dentro del cuadro */
+    background-repeat: no-repeat;
+     /* TAMAÑO DEL CUADRO (Necesario ahora que no hay texto) */
+    width: 1100px;  /* Ajusta el ancho a tu antojo */
+    height: 500px; /* Ajusta el alto a tu antojo */
+    position: fixed;
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%) scale(1); /* Aquí puedes cambiar el scale a tu antojo */
+    
+    z-index: 10000;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #aaa;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
