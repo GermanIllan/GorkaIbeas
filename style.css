@@ -40,6 +40,7 @@ nav {
 nav a {
     color: white;
     text-decoration: 1;
+    text-decoration: none;
     margin: 0 95px;
     font-weight: bold;
     transition: 0.9s;

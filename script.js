@@ -22,29 +22,4 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 
-    // 3. Función para cambiar el degradado dinámicamente
-    // Agregaremos un botón pequeño en el footer para demostrarlo
-    const footer = document.querySelector('footer');
-    const changeBgBtn = document.createElement('button');
-    changeBgBtn.innerText = "Cambiar Color de Fondo";
-    changeBgBtn.style.marginTop = "10px";
-    changeBgBtn.style.padding = "5px 10px";
-    changeBgBtn.style.cursor = "pointer";
-    changeBgBtn.style.fontFamily = "inherit";
-
-    footer.appendChild(document.createElement('br'));
-    footer.appendChild(changeBgBtn);
-
-    changeBgBtn.addEventListener('click', () => {
-        const colors = [
-            'linear-gradient(135deg, #000000, #d32f2f)', // Negro a Rojo
-            'linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d)', // Azul a Amarillo
-            'linear-gradient(135deg, #1d1d1d, #434343)', // Gris oscuro
-            'linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045)'  // Instagram style
-        ];
-        
-        const randomGradient = colors[Math.floor(Math.random() * colors.length)];
-        document.body.style.background = randomGradient;
-        document.body.style.backgroundAttachment = "fixed";
-    });
 });
