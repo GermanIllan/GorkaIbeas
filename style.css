@@ -81,7 +81,6 @@ main {
 
 .content-box {
    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px);
     border-radius: 15px;
     padding: 0; /* Quitamos el padding para que la imagen llegue a los bordes si quieres */
 
@@ -118,6 +117,7 @@ main {
     /* INSERTAR IMAGEN DE TU CARPETA */
     background-image: url('Imagenes/SubTitulo.png'); /* Pon aquí el nombre exacto de tu archivo */
     background-size: cover;      /* Hace que la imagen cubra todo el cuadro */
+
     background-position: center; /* Centra la imagen dentro del cuadro */
     background-repeat: no-repeat;
 
@@ -155,4 +155,25 @@ footer {
     text-align: center;
     padding: 1.5rem;
     font-size: 0.9rem;
+}
+/* SECCIÓN NOSOTROS */
+.content-nosotros {
+    /* Estilos visuales */
+    width: 70%;
+    margin: 10px auto; /* Centrado horizontalmente y separado del menú */
+    background-color: rgba(0, 0, 0, 0);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+
+    /* ESTADO INICIAL DE LA ANIMACIÓN */
+    opacity: 0;                    /* Invisible al principio */
+    transform: translateY(100px);  /* Desplazado 100px hacia abajo */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out; /* Suavizado */
+}
+
+/* ESTADO FINAL (se añade con JS) */
+.content-nosotros.aparecer {
+    opacity: 1;
+    transform: translateY(0);      /* Vuelve a su posición original */
 }
